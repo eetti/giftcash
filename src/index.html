@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var socket = io();
+                socket.on('add', (msg) => {
+                    document.body.style.backgroundColor = "rgb("+msg[0]%365+", "+msg[1]%365+", 0)";
+                    console.log('msg: ' + msg );
+                    console.log('color: ' + document.body.style.backgroundColor );
+                });
+            });
+        </script>
+    </head>
+    <body style="background-color: white;">
+
+    </body>
+    </body
+</html>
